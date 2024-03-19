@@ -33,7 +33,7 @@ const Login = () => {
           withCredentials: true,
         }
       )
-      console.log(JSON.stringify(response?.data))
+      //console.log(JSON.stringify(response?.data))
       // console.log(JSON.stringify(response))
       const accessToken = response?.data?.accessToken
       const roles = response?.data?.roles
@@ -59,10 +59,10 @@ const Login = () => {
     <>
       {success ? (
         <section>
-          <h1>You are logged in!</h1>
+          <h1>Du bist eingeloggt!</h1>
           <br />
           <p>
-            <a href='#'>Go to Home</a>
+            <a href='#'>Zurück zur Hauptseite</a>
           </p>
         </section>
       ) : (
@@ -74,7 +74,7 @@ const Login = () => {
           >
             {errMsg}
           </p>
-          <h1>Sign In</h1>
+          <h1>Anmelden</h1>
           <form onSubmit={handleSubmit}>
             <label htmlFor='username'>Username:</label>
             <input
@@ -86,7 +86,7 @@ const Login = () => {
               value={user}
               required
             />
-            <label htmlFor='password'>Password:</label>
+            <label htmlFor='password'>Passwort:</label>
             <input
               type='password'
               id='password'
@@ -94,14 +94,14 @@ const Login = () => {
               value={pwd}
               required
             />
-            <button>Sign In</button>
+            <button>Anmelden</button>
           </form>
           <p>
-            Need an Account?
+            Noch kein Account?
             <br />
             <span className='line'>
               {/* put router link here */}
-              <a href='#'>Sign Up</a>
+              <a href='#'>Account anlegen</a>
             </span>
           </p>
         </section>

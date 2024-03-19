@@ -68,8 +68,8 @@ app.all('*', (req, res) => {
 // Globale Fehlerbehandlung
 app.use(errorHandler)
 
-// Bei erfolgreicher Verbindung zur MongoDB den Server starten
+// Bei erfolgreicher Verbindung zu MongoDB den Server starten
 mongoose.connection.once('open', () => {
-  console.log('Connected to MongoDB')
+  console.log('mit MongoDB verbunden')
   app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
 })
